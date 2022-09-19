@@ -1,0 +1,55 @@
+
+div {
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    color: #fff;
+    background: rgb(1, 27, 52);
+  }
+  .title {
+    padding: 30px;
+    font-size: 3rem;
+    text-align: center;
+  }
+  #calendar {
+    margin: 0;
+  }
+  .month {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+  }
+  .weeks {
+    display: flex;
+    flex-wrap: wrap;
+    color: teal;
+  }
+  
+  .week-day {
+    width: 100px;
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .today{
+    background: rgba(2, 38, 75, 0.844);
+    padding: 0.8rem;
+    border-radius: 100%;
+  }
+  .day {
+    width: 11.18%;
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 30px 10px;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+  }
+  a:hover {
+    color: red;
+  }
