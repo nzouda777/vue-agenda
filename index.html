@@ -13,7 +13,10 @@
         <div class="row">
             <div class="col-lg-6">
                 <div id="calendar">
-                    <div class="title">{{title}}</div>
+                  <div class="imgHandler">
+                    <img :src="lutinImg" alt="">
+                  </div>
+                    <div class="title">{{ dayNote}}</div>
                     <div class="month">
                       <a href="#" @click="previousMonth">
                         < </a> {{thisMonth}} <a href="#" @click="nextMonth"> > </a></div>
@@ -38,7 +41,7 @@
                       <div class="day" v-if="lastDay==28" v-for="a in 6"></div>
                     </div>
                     <div class="days" v-if="firstWeekDay == 'Tuesday'  && firstWeekDay != 'Sunday' && firstWeekDay != 'Monday'">
-                      <div class="day" v-for="a in 2"></div>
+                      <div class="day" v-for="a in 1"></div>
                       <div class="day" v-for="n in lastDay">{{ n }}</div>
                       <div class="day" v-if="lastDay==31" v-for="a in 2"></div>
                       <div class="day" v-if="lastDay==30" v-for="a in 3"></div>
@@ -53,25 +56,25 @@
                       <div class="day" v-if="lastDay==29" v-for="a in 3"></div>
                       <div class="day" v-if="lastDay==28" v-for="a in 4"></div>
                     </div>
-                    <div class="days" v-if="firstWeekDay == 'Thursday'  && firstWeekDay != 'Sunday' && firstWeekDay != 'Monday' && firstWeekDay != 'Tuesday' && firstWeekDay != 'Wednssday'">
+                    <div class="days" v-if="firstWeekDay == 'Thursday'  && firstWeekDay != 'Sunday' && firstWeekDay != 'Monday' && firstWeekDay != 'Tuesday' && firstWeekDay != 'Wednesday'">
                       <div class="day" v-for="a in 4"></div>
                       <div class="day" v-for="n in lastDay">
                         <span class="today" v-if="n==today">{{ n }}</span>
-                        <span v-if="n!=today">{{ n }}</span>
+                        <span v-if=" n!= today">{{ n }}</span>
                       </div>
-                      <div class="day" v-if="lastDay==30"></div>
+                      <div class="day" v-if="lastDay==30" v-for="a in 4"></div>
                        <div class="day" v-if="lastDay==29" v-for="a in 2"></div>
                       <div class="day" v-if="lastDay==28" v-for="a in 3"></div>
                      
                     </div>
-                    <div class="days" v-if="firstWeekDay == 'Friday' && firstWeekDay != 'Sunday' && firstWeekDay != 'Monday' && firstWeekDay != 'Tuesday' && firstWeekDay != 'Wednssday' && firstWeekDay != 'Thursday'">
+                    <div class="days" v-if="firstWeekDay == 'Friday' && firstWeekDay != 'Sunday' && firstWeekDay != 'Monday' && firstWeekDay != 'Tuesday' && firstWeekDay != 'Wednesday' && firstWeekDay != 'Thursday'">
                       <div class="day" v-for="a in 5"></div>
                       <div class="day" v-for="n in lastDay">{{ n }}</div>
                       <div class="day" v-if="lastDay==31" v-for="a in 6"></div>
                       <div class="day" v-if="lastDay==29" v-for="a in 1"></div>
                       <div class="day" v-if="lastDay==28" v-for="a in 2"></div>
                     </div>
-                    <div class="days" v-if="firstWeekDay == 'Saturday' && firstWeekDay != 'Sunday' && firstWeekDay != 'Monday' && firstWeekDay != 'Tuesday' && firstWeekDay != 'Wednssday' && firstWeekDay != 'Thursday' && firstWeekDay != 'Friday'">
+                    <div class="days" v-if="firstWeekDay == 'Saturday' && firstWeekDay != 'Sunday' && firstWeekDay != 'Monday' && firstWeekDay != 'Tuesday' && firstWeekDay != 'Wednesday' && firstWeekDay != 'Thursday' && firstWeekDay != 'Friday'">
                       <div class="day" v-for="a in 6"></div>
                       <div class="day" v-for="n in lastDay">{{ n }}</div>
                       <div class="day" v-if="lastDay==31" v-for="a in 5"></div>
@@ -86,12 +89,26 @@
                     <br>
                     <br>
                     <!--     <span>first day: {{startOfMonth.firstDay}}</span> -->
-                  
-                  </div>
                   </div>
             </div>
-            <div class="col-lg-6 bg-warning">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione velit illo, nobis esse veritatis hic, maiores temporibus corporis, beatae quam delectus obcaecati expedita architecto. Ab sint laboriosam eum explicabo asperiores.
+            <div class="col-lg-6 ">
+                <div class="wrap">
+                  <p class="question">De combien de temps avez vous besoin ?</p>
+                  <div class="time">
+                    <span class="element selectedDuration">15 min</span>
+                    <span class="element">30 min</span>
+                    <span class="element">1 heure</span>
+                  </div>
+                  <p class="question">Quelle heure vous convient le mieux ?</p>
+                  <div class="fuseau-horaire">
+                    UTC +01: heure normale d'Europe centrale (Europe)
+                  </div>
+                  <div class="hours">
+                    <div class="hour">16:15</div>
+                    <div class="hour">16:30</div>
+                    <div class="hour">16:45</div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>

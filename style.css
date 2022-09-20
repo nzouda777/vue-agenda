@@ -1,12 +1,23 @@
 
-div {
+#calendar {
     font-family: Tahoma, Verdana, Segoe, sans-serif;
     color: #fff;
     background: rgb(1, 27, 52);
   }
+  .imgHandler{
+    display: flex;
+    justify-content: center;
+  }
+  img{
+    margin-top: 2rem;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
   .title {
     padding: 30px;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
   }
   #calendar {
@@ -21,26 +32,28 @@ div {
   .weeks {
     display: flex;
     flex-wrap: wrap;
-    color: teal;
   }
   
   .week-day {
-    width: 100px;
+    width: 50px;
     flex-grow: 1;
     padding: 10px;
     text-align: center;
   }
   .days {
     display: flex;
+    
     flex-wrap: wrap;
   }
   .today{
-    background: rgba(2, 38, 75, 0.844);
+    background: rgb(255, 255, 255);
     padding: 0.8rem;
+    color: #000000;
     border-radius: 100%;
   }
   .day {
-    width: 11.18%;
+    width: 13%;
+    flex-wrap: wrap;
     flex: 1 0 auto;
     text-align: center;
     padding: 30px 10px;
@@ -53,3 +66,46 @@ div {
   a:hover {
     color: red;
   }
+/* right side design */
+.wrap{
+  margin: 1.5rem;
+}
+.wrap > .question{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.wrap > .time{
+  height: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(95, 94, 94, 0.4);
+}
+.wrap > .time > .element{
+  width: 35%;
+  height: 29px;
+  border-right: 1px solid rgba(0, 0, 0, 40%);
+}
+.wrap > .time > .element:last-child{
+  border-right: none;
+}
+.selectedDuration{
+  background-size: cover;
+  background-position: center;
+  background: rgba(108, 126, 148, 0.427);
+}
+.fuseau-horaire{
+  color: teal;
+  margin-top: -20px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.hours{
+}
+.hour{
+  margin-top: 20px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(95, 94, 94, 0.4) ;
+}
